@@ -80,28 +80,155 @@
   <div class="post-content">
     <header>
       
-        <time datetime="2015-08-15T01:20:30.000Z"><a href="/2015/08/15/lock/">2015-08-15</a></time>
+        <time datetime="2015-08-21T03:25:26.000Z"><a href="/2015/08/21/lantern/">2015-08-21</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/08/15/lock/">乐观锁与悲观锁</a></h1>
+    <h1 class="title"><a href="/2015/08/21/lantern/">lantern点对点信任开放网络</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="什么是锁">什么是锁</h3><p>锁在传统意义上是指期封闭作用的器具，在计算机领域通常是指单一访问的一种机制。</p>
-<h3 id="为什么需要锁">为什么需要锁</h3><p>为了解决并发控制，当多个用户同一时间对同一资源进行操作的时候，不能够允许同时操作，只能让单一用户操作。如果用户同时操作，会出现如下问题：</p>
-<ul>
-<li>更新丢失，一个事务的更新覆盖了其它事务的更新，就是典型的更新丢失。比如：A用户把数据修改为2=&gt;6，B用户把2=&gt;6，A用户就会丢失他的更新。</li>
-<li>脏读，当一个事务读取其它完成一半的事务的记录的时候，就会发生脏读。比如：用户A、B看到的记录都是6，用户B把记录修改为2，A读取的仍然是2.<br>为了解决这些问题，需要引入并发控制。
+        <p>发现一款可以用来翻墙的工具 <a href="https://www.getlantern.org/" target="_blank" rel="external">https://www.getlantern.org/</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2015-08-20T16:16:28.000Z"><a href="/2015/08/21/hexo-github/">2015-08-21</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/08/21/hexo-github/">用hexo+github创建自己的blog</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>hexo是一款基于node.js的静态博客框架</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2015-08-20T16:02:56.000Z"><a href="/2015/08/21/php-magic-function/">2015-08-21</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/08/21/php-magic-function/">PHP中的魔术方法</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>常见的PHP魔术方法有<strong>get </strong>set <strong>construct </strong>discontruct <strong>call </strong>toString <strong>clone </strong>sleep <strong>walkup </strong>invoke <strong>callStatic </strong>debugInfo __set_state<br>在命名自己的类方法时不能使用这些方法名称，除非想使用魔术功能。<br><strong>php手册中建议不要使用以两个下划线为前缀开头的方法</strong></p>
+<p><strong>sleep与</strong>walkup</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2015-08-19T03:18:03.000Z"><a href="/2015/08/19/distributed/">2015-08-19</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/08/19/distributed/">分布式与集群的区别</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>简单的来说，分布式是以缩短单个任务的执行时间来提升效率的，而集群则是通过提高单位时间内执行的任务数来提升效率。</p>
+<p>例如：<br>如果一个任务是由10个子任务组成，每个子任务单独执行需要一个小时，则在一台服务器上执行该任务需要10个小时。采用分布式方案，提供10台服务器，每台服务器负责处理一个子任务，不考虑子任务之间的依赖关系，执行完这个任务只需要一个小时。（这种工作模式的一个典型代表就是Hadoop的Map/Reduce分布式计算模型）<br>
       
     </div>
     <footer>
       
         
           <div class="alignleft">
-            <a href="/2015/08/15/lock/#more" class="more-link">Read More</a>
+            <a href="/2015/08/19/distributed/#more" class="more-link">Read More</a>
           </div>
         
         
@@ -130,118 +257,17 @@
   <div class="post-content">
     <header>
       
-        <time datetime="2015-08-14T17:49:04.000Z"><a href="/2015/08/15/singleten/">2015-08-15</a></time>
+        <time datetime="2015-08-18T09:18:02.000Z"><a href="/2015/08/18/oop-principle/">2015-08-18</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/08/15/singleten/">设计模式之单例模式</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <hr>
-<h3 id="概述">概述</h3><p>单例模式是一种比较常见的软件设计模式，核心思想是一个类只能有一个实例，并且这个类自行实例化向系统提供服务。<br>因此，如果一个类要实现单例模式，需要满足以下几点。</p>
-<ul>
-<li>不能new 关键字实例化</li>
-<li>不能被继承</li>
-<li>保存类实例的静态变量</li>
-<li>获取类实力的静态方法</li>
-<li>不能被复制（克隆）</li>
-<li>线程安全
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2015/08/15/singleten/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/git/">2015-08-14</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/08/14/git/">Git常用操作</a></h1>
+    <h1 class="title"><a href="/2015/08/18/oop-principle/">面向对象设计的六大原则</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="简介">简介</h3><p><strong>Git</strong>作为新一代的版本控制工具，给编程带来了难以想象的好处。<br>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2015/08/14/git/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/sort/">2015-08-14</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/08/14/sort/">常用排序算法</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p><strong>排序算法</strong>是程序员必须掌握的基本技能！比较常用的算法有冒泡排序、希尔排序、快速排序、堆排序等！</p>
-<h3 id="快速排序">快速排序</h3>
+        <h3 id="单一职责原则（Single_Responsibility_Principle）">单一职责原则（Single Responsibility Principle）</h3>
       
     </div>
     <footer>
@@ -262,8 +288,12 @@
     <li><a class="page-next icon-chevron-sign-right" href="javascript:;" title="下一页"></a></li>
 </ul>
 
+    <nav id="page-list" class="page-list"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a></nav>
+
 <nav id="pagination">
   
+  
+    <a href="/page/2/" class="alignright next">下一页</a>
   
   <div class="clearfix"></div>
 </nav></div></div>
@@ -283,11 +313,15 @@
   
     <li><a href="/tags/Git/">Git</a><small>1</small></li>
   
+    <li><a href="/tags/PHP/">PHP</a><small>1</small></li>
+  
     <li><a href="/tags/乐观锁-悲观锁/">乐观锁 悲观锁</a><small>1</small></li>
   
     <li><a href="/tags/排序/">排序</a><small>1</small></li>
   
-    <li><a href="/tags/设计模式/">设计模式</a><small>1</small></li>
+    <li><a href="/tags/架构/">架构</a><small>1</small></li>
+  
+    <li><a href="/tags/设计模式/">设计模式</a><small>2</small></li>
   
   </ul>
 </div>
@@ -298,7 +332,7 @@
   <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/技术/">技术</a><small>2</small></li>
+    <li><a href="/categories/技术/">技术</a><small>3</small></li>
   
   </ul>
 </div>
@@ -310,6 +344,30 @@
   <ul class="entry">
     
       <li>
+        <a href="/2015/08/21/lantern/">lantern点对点信任开放网络</a>
+      </li>
+    
+      <li>
+        <a href="/2015/08/21/hexo-github/">用hexo+github创建自己的blog</a>
+      </li>
+    
+      <li>
+        <a href="/2015/08/21/php-magic-function/">PHP中的魔术方法</a>
+      </li>
+    
+      <li>
+        <a href="/2015/08/19/distributed/">分布式与集群的区别</a>
+      </li>
+    
+      <li>
+        <a href="/2015/08/18/oop-principle/">面向对象设计的六大原则</a>
+      </li>
+    
+      <li>
+        <a href="/2015/08/17/simple-factory/">设计模式之简单工厂模式</a>
+      </li>
+    
+      <li>
         <a href="/2015/08/15/lock/">乐观锁与悲观锁</a>
       </li>
     
@@ -318,11 +376,11 @@
       </li>
     
       <li>
-        <a href="/2015/08/14/git/">Git常用操作</a>
+        <a href="/2015/08/14/sort/">常用排序算法</a>
       </li>
     
       <li>
-        <a href="/2015/08/14/sort/">常用排序算法</a>
+        <a href="/2015/08/14/git/">Git常用操作</a>
       </li>
     
   </ul>

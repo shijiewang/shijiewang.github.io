@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git常用操作 | 雪域天堂&#39;Blog</title>
+  <title>设计模式之简单工厂模式 | 雪域天堂&#39;Blog</title>
   <meta name="author" content="wangshihchieh">
   
   <meta name="description" content="学而不思则罔">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Git常用操作"/>
+  <meta property="og:title" content="设计模式之简单工厂模式"/>
   <meta property="og:site_name" content="雪域天堂&#39;Blog"/>
 
   
@@ -79,21 +79,17 @@
   <div class="post-content">
     <header>
       
-        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/git/">2015-08-14</a></time>
+        <time datetime="2015-08-17T15:51:07.000Z"><a href="/2015/08/17/simple-factory/">2015-08-17</a></time>
       
       
   
-    <h1 class="title">Git常用操作</h1>
+    <h1 class="title">设计模式之简单工厂模式</h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="简介">简介</h3><p><strong>Git</strong>作为新一代的版本控制工具，给编程带来了难以想象的好处。<br><a id="more"></a></p>
-<h3 id="git的基本配置">git的基本配置</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#配置git使用者的名字</span></span><br><span class="line">git config user.name=<span class="string">"Your Name"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#配置git使用者的邮箱</span></span><br><span class="line">git config user.email=<span class="string">"email"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#配置git命令的颜色</span></span><br><span class="line">git config color.ui=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="git的基本操作">git的基本操作</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#增加新的文件</span></span><br><span class="line">git <span class="built_in">add</span> filename</span><br><span class="line"></span><br><span class="line"><span class="comment">#提交文件</span></span><br><span class="line">git commit -m <span class="string">'提交说明'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#提交记录</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line">git <span class="built_in">log</span> <span class="built_in">file</span></span><br><span class="line">git <span class="built_in">log</span> -p &lt;<span class="built_in">file</span>&gt;</span><br><span class="line">git <span class="built_in">log</span> -p -<span class="number">2</span></span><br><span class="line">git <span class="built_in">log</span> <span class="comment">--stat</span></span><br></pre></td></tr></table></figure>
-<h3 id="对比diff">对比diff</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#比较当前文件与暂存区文件</span></span><br><span class="line">git diff</span><br><span class="line">git diff &lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较两次提交</span></span><br><span class="line">git diff $id1 $id2</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较两个分支</span></span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较暂存区与版本库</span></span><br><span class="line">git diff --staged</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较当前与暂存区</span></span><br><span class="line">git diff --cached</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较统计</span></span><br><span class="line">git diff --stat</span><br><span class="line">git diff --cached</span><br></pre></td></tr></table></figure>
-<h3 id="分支">分支</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#查看分支</span></span><br><span class="line">git branch</span><br><span class="line">git branch -a</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#切换分支</span></span><br><span class="line">git checkout &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#创建新的分支并切换到新分支</span></span><br><span class="line">git checkout -b &lt;<span class="keyword">new</span> branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#基于分支创建新的分支</span></span><br><span class="line">git checkout -b &lt;<span class="keyword">new</span> branch&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#删除分支</span></span><br><span class="line">git branch -d</span><br><span class="line">git branch -D</span><br></pre></td></tr></table></figure>
+        <h3 id="简单工厂的定义：">简单工厂的定义：</h3><p>简单工厂模式是创建型设计模式，又可以称作静态工厂方法模式，是通过专门一个类来负责创建其他类的实例，被创建的实例通常具有共同的父类或者实现来自同一个接口。简单工厂是为了解决如何实例化一个合适的对象，其核心思想就是有一个专门的类来负责创建实例的过程。<br><a id="more"></a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="comment">//工厂模式</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">IUser</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> <span class="keyword">implements</span> <span class="title">IUser</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(<span class="variable">$id</span>)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Jack"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserFactory</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">create</span><span class="params">(<span class="variable">$id</span>)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> User(<span class="variable">$id</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$user</span> = UserFactory(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$user</span>-&gt;getName(), <span class="string">"\n"</span>;</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -102,9 +98,14 @@
 
         
           <div class="alignleft post-nav">
-            <em>上一篇: </em><a href="/2015/08/14/sort/">常用排序算法</a>
+            <em>上一篇: </em><a href="/2015/08/18/oop-principle/">面向对象设计的六大原则</a>
           </div>
         
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2015/08/15/lock/">乐观锁与悲观锁</a>
+          </div>
+          <div class="clearfix"></div>
         
 
         
@@ -115,23 +116,18 @@
             
               <span class="from-link">
                 <em>本文链接地址:</em>
-                <a href="/2015/08/14/git/">
-                  http://shijiewang.github.io/2015/08/14/git/
+                <a href="/2015/08/17/simple-factory/">
+                  http://shijiewang.github.io/2015/08/17/simple-factory/
                 </a>
               </span>
             
           </div>
         
         
-  
-  <div class="categories">
-    <a href="/categories/技术/">技术</a>
-  </div>
-
         
   
   <div class="tags">
-    <a href="/tags/Git/">Git</a>
+    <a href="/tags/设计模式/">设计模式</a>
   </div>
 
         
