@@ -80,6 +80,50 @@
   <div class="post-content">
     <header>
       
+        <time datetime="2015-08-21T09:59:31.000Z"><a href="/2015/08/21/hex-add/">2015-08-21</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/08/21/hex-add/">多进制加法</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>多进制加法，实际项目中有使用到，mark一下。</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> hex_add(<span class="variable">$a</span>, <span class="variable">$b</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="variable">$result</span> = <span class="string">''</span>;</span><br><span class="line">    <span class="variable">$chars</span> = <span class="string">'0123456789abcdef'</span>;</span><br><span class="line">    <span class="variable">$len</span>_a = strlen(<span class="variable">$a</span>);</span><br><span class="line">    <span class="variable">$len</span>_b = strlen(<span class="variable">$b</span>);</span><br><span class="line"></span><br><span class="line">    if (<span class="variable">$len</span>_a &gt; <span class="variable">$len</span>_b) &#123;</span><br><span class="line">        <span class="variable">$max</span> = <span class="variable">$len</span>_a;</span><br><span class="line">        <span class="variable">$b</span> = str_pad(<span class="variable">$b</span>, <span class="variable">$len</span>_a, <span class="string">'0'</span>, STR_PAD_LEFT);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        <span class="variable">$max</span> = <span class="variable">$len</span>_b;</span><br><span class="line">        <span class="variable">$a</span> = str_pad(<span class="variable">$a</span>, <span class="variable">$len</span>_b, <span class="string">'0'</span>, STR_PAD_LEFT);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$inc</span> = <span class="variable">$pos</span> = <span class="number">0</span>;</span><br><span class="line">    for (<span class="variable">$i</span> = <span class="variable">$max</span> - <span class="number">1</span>; <span class="variable">$i</span> &gt;= <span class="number">0</span>; <span class="variable">$i--</span>) &#123;</span><br><span class="line">        <span class="variable">$pos</span> = hexdec(<span class="variable">$a</span>[<span class="variable">$i</span>]) + hexdec(<span class="variable">$b</span>[<span class="variable">$i</span>]) + <span class="variable">$inc</span>;</span><br><span class="line">        <span class="variable">$inc</span> = floor(<span class="variable">$pos</span> / <span class="number">16</span>);</span><br><span class="line">        <span class="variable">$result</span> =  <span class="variable">$chars</span>[<span class="variable">$pos</span> % <span class="number">16</span>] . <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    if (<span class="variable">$inc</span>) &#123;</span><br><span class="line">        return <span class="variable">$inc</span> . <span class="variable">$result</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    return <span class="variable">$result</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
         <time datetime="2015-08-21T08:15:33.000Z"><a href="/2015/08/21/php-gc/">2015-08-21</a></time>
       
       
@@ -240,53 +284,6 @@
 
 
 
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-08-19T03:18:03.000Z"><a href="/2015/08/19/distributed/">2015-08-19</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/08/19/distributed/">分布式与集群的区别</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>简单的来说，分布式是以缩短单个任务的执行时间来提升效率的，而集群则是通过提高单位时间内执行的任务数来提升效率。</p>
-<p>例如：<br>如果一个任务是由10个子任务组成，每个子任务单独执行需要一个小时，则在一台服务器上执行该任务需要10个小时。采用分布式方案，提供10台服务器，每台服务器负责处理一个子任务，不考虑子任务之间的依赖关系，执行完这个任务只需要一个小时。（这种工作模式的一个典型代表就是Hadoop的Map/Reduce分布式计算模型）<br>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2015/08/19/distributed/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
 
 <ul class="page-direction" id="page-direction">
     <li><a class="page-prev icon-chevron-sign-left" href="javascript:;" title="上一页"></a></li>
@@ -349,6 +346,10 @@
 <div class="widget tag">
   <h3 class="title">最新文章</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/2015/08/21/hex-add/">多进制加法</a>
+      </li>
     
       <li>
         <a href="/2015/08/21/php-gc/">php垃圾回收</a>
