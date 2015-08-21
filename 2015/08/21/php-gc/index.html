@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git常用操作 | 雪域天堂&#39;Blog</title>
+  <title>php_gc | 雪域天堂&#39;Blog</title>
   <meta name="author" content="wangshihchieh">
   
   <meta name="description" content="学而不思则罔">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Git常用操作"/>
+  <meta property="og:title" content="php_gc"/>
   <meta property="og:site_name" content="雪域天堂&#39;Blog"/>
 
   
@@ -79,21 +79,18 @@
   <div class="post-content">
     <header>
       
-        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/git/">2015-08-14</a></time>
+        <time datetime="2015-08-21T08:15:33.000Z"><a href="/2015/08/21/php-gc/">2015-08-21</a></time>
       
       
   
-    <h1 class="title">Git常用操作</h1>
+    <h1 class="title">php_gc</h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="简介">简介</h3><p><strong>Git</strong>作为新一代的版本控制工具，给编程带来了难以想象的好处。<br><a id="more"></a></p>
-<h3 id="git的基本配置">git的基本配置</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#配置git使用者的名字</span></span><br><span class="line">git config user.name=<span class="string">"Your Name"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#配置git使用者的邮箱</span></span><br><span class="line">git config user.email=<span class="string">"email"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#配置git命令的颜色</span></span><br><span class="line">git config color.ui=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="git的基本操作">git的基本操作</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#增加新的文件</span></span><br><span class="line">git <span class="built_in">add</span> filename</span><br><span class="line"></span><br><span class="line"><span class="comment">#提交文件</span></span><br><span class="line">git commit -m <span class="string">'提交说明'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#提交记录</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line">git <span class="built_in">log</span> <span class="built_in">file</span></span><br><span class="line">git <span class="built_in">log</span> -p &lt;<span class="built_in">file</span>&gt;</span><br><span class="line">git <span class="built_in">log</span> -p -<span class="number">2</span></span><br><span class="line">git <span class="built_in">log</span> <span class="comment">--stat</span></span><br></pre></td></tr></table></figure>
-<h3 id="对比diff">对比diff</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#比较当前文件与暂存区文件</span></span><br><span class="line">git diff</span><br><span class="line">git diff &lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较两次提交</span></span><br><span class="line">git diff $id1 $id2</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较两个分支</span></span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较暂存区与版本库</span></span><br><span class="line">git diff --staged</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较当前与暂存区</span></span><br><span class="line">git diff --cached</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较统计</span></span><br><span class="line">git diff --stat</span><br><span class="line">git diff --cached</span><br></pre></td></tr></table></figure>
-<h3 id="分支">分支</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#查看分支</span></span><br><span class="line">git branch</span><br><span class="line">git branch -a</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#切换分支</span></span><br><span class="line">git checkout &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#创建新的分支并切换到新分支</span></span><br><span class="line">git checkout -b &lt;<span class="keyword">new</span> branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#基于分支创建新的分支</span></span><br><span class="line">git checkout -b &lt;<span class="keyword">new</span> branch&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#删除分支</span></span><br><span class="line">git branch -d</span><br><span class="line">git branch -D</span><br></pre></td></tr></table></figure>
+        <p>php是一种脚本语言，一般情况下不需要进行内存回收，当进程结束后，系统将会将进程的内存回收；但是也有一些情况，比如在运行一个脚本的时候，这个脚本需要执行比较长的时间，如果代码中存在内存泄露的情况下，肯能就会出现内存不足的状况。</p>
+<p>php是由c语言实现的脚本语言，弱类型，变量的值存在zval变量容器中。其中处了保存变量的值与类型之外，还保存了两个字节的额外信息，一个是”is_ref”的布尔值，标示是否为引用类型，区分变量的类型（普通变量与引用变量 ）;另外一个是”refcount” 表示引用的个数，通常情况下这个值为1。</p>
 
       
     </div>
@@ -101,10 +98,11 @@
       
 
         
-          <div class="alignleft post-nav">
-            <em>上一篇: </em><a href="/2015/08/14/sort/">常用排序算法</a>
-          </div>
         
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2015/08/21/lantern/">lantern点对点信任开放网络（翻墙必备）</a>
+          </div>
+          <div class="clearfix"></div>
         
 
         
@@ -115,23 +113,18 @@
             
               <span class="from-link">
                 <em>本文链接地址:</em>
-                <a href="/2015/08/14/git/">
-                  http://shijiewang.github.io/2015/08/14/git/
+                <a href="/2015/08/21/php-gc/">
+                  http://shijiewang.github.io/2015/08/21/php-gc/
                 </a>
               </span>
             
           </div>
         
         
-  
-  <div class="categories">
-    <a href="/categories/技术/">技术</a>
-  </div>
-
         
   
   <div class="tags">
-    <a href="/tags/Git/">Git</a>
+    <a href="/tags/PHP/">PHP</a>
   </div>
 
         
