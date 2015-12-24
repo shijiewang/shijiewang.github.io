@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="baidu-site-verification" content="DW63u8oK8I" />
   
-  <title>Git常用操作 | 雪域天堂&#39;Blog</title>
+  <title>php7 | 雪域天堂&#39;Blog</title>
   <meta name="author" content="wangshihchieh">
   
   <meta name="description" content="学而不思则罔">
@@ -12,7 +12,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Git常用操作"/>
+  <meta property="og:title" content="php7"/>
   <meta property="og:site_name" content="雪域天堂&#39;Blog"/>
 
   
@@ -80,35 +80,26 @@
   <div class="post-content">
     <header>
       
-        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/git/">2015-08-14</a></time>
+        <time datetime="2015-12-04T08:57:41.000Z"><a href="/2015/12/04/php7/">2015-12-04</a></time>
       
       
   
-    <h1 class="title">Git常用操作</h1>
+    <h1 class="title">php7</h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="简介">简介</h3><p><strong>Git</strong>作为新一代的版本控制工具，给编程带来了难以想象的好处。<br><a id="more"></a></p>
-<h3 id="git的基本配置">git的基本配置</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#配置git使用者的名字</span></span><br><span class="line">git config user.name=<span class="string">"Your Name"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#配置git使用者的邮箱</span></span><br><span class="line">git config user.email=<span class="string">"email"</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#配置git命令的颜色</span></span><br><span class="line">git config color.ui=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<h3 id="git的基本操作">git的基本操作</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#增加新的文件</span></span><br><span class="line">git <span class="built_in">add</span> filename</span><br><span class="line"></span><br><span class="line"><span class="comment">#提交文件</span></span><br><span class="line">git commit -m <span class="string">'提交说明'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#提交记录</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line">git <span class="built_in">log</span> <span class="built_in">file</span></span><br><span class="line">git <span class="built_in">log</span> -p &lt;<span class="built_in">file</span>&gt;</span><br><span class="line">git <span class="built_in">log</span> -p -<span class="number">2</span></span><br><span class="line">git <span class="built_in">log</span> <span class="comment">--stat</span></span><br></pre></td></tr></table></figure>
-<h3 id="对比diff">对比diff</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#比较当前文件与暂存区文件</span></span><br><span class="line">git diff</span><br><span class="line">git diff &lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较两次提交</span></span><br><span class="line">git diff $id1 $id2</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较两个分支</span></span><br><span class="line">git diff &lt;branch1&gt;..&lt;branch2&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较暂存区与版本库</span></span><br><span class="line">git diff --staged</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较当前与暂存区</span></span><br><span class="line">git diff --cached</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#比较统计</span></span><br><span class="line">git diff --stat</span><br><span class="line">git diff --cached</span><br></pre></td></tr></table></figure>
-<h3 id="分支">分支</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#查看分支</span></span><br><span class="line">git branch</span><br><span class="line">git branch -a</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#切换分支</span></span><br><span class="line">git checkout &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#创建新的分支并切换到新分支</span></span><br><span class="line">git checkout -b &lt;<span class="keyword">new</span> branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#基于分支创建新的分支</span></span><br><span class="line">git checkout -b &lt;<span class="keyword">new</span> branch&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#删除分支</span></span><br><span class="line">git branch -d</span><br><span class="line">git branch -D</span><br></pre></td></tr></table></figure>
-
+        
       
     </div>
     <footer>
       
 
         
-          <div class="alignleft post-nav">
-            <em>上一篇: </em><a href="/2015/08/15/singleten/">设计模式之单例模式</a>
-          </div>
-        
         
           <div class="alignright post-nav">
-            <em>下一篇: </em><a href="/2015/08/14/sort/">常用排序算法</a>
+            <em>下一篇: </em><a href="/2015/09/28/zhongqiu/">中秋节</a>
           </div>
           <div class="clearfix"></div>
         
@@ -121,15 +112,15 @@
             
               <span class="from-link">
                 <em>本文链接地址:</em>
-                <a href="/2015/08/14/git/">
-                  http://shijiewang.github.io/2015/08/14/git/
+                <a href="/2015/12/04/php7/">
+                  http://shijiewang.github.io/2015/12/04/php7/
                 </a>
               </span>
             
           </div>
 
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="post-git" data-title="Git常用操作" data-url="http://shijiewang.github.io/2015/08/14/git/"></div>
+        <div class="ds-thread" data-thread-key="post-php7" data-title="php7" data-url="http://shijiewang.github.io/2015/12/04/php7/"></div>
         <!-- 多说评论框 end -->
         <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
         <script type="text/javascript">
@@ -148,15 +139,10 @@
         
   
   <div class="categories">
-    <a href="/categories/技术/">技术</a>
+    <a href="/categories/php/">php</a>
   </div>
 
         
-  
-  <div class="tags">
-    <a href="/tags/Git/">Git</a>
-  </div>
-
         
 
 <div class="bdsharebuttonbox" data-tag="share_1">
@@ -171,9 +157,9 @@
 <script>
     window._bd_share_config = {
         common : {
-            bdText : 'Git常用操作',
+            bdText : 'php7',
             bdDesc : 'undefined',
-            bdUrl : 'http://shijiewang.github.io/2015/08/14/git/'
+            bdUrl : 'http://shijiewang.github.io/2015/12/04/php7/'
         },
         share : [{
             "bdSize" : 24

@@ -47,7 +47,7 @@
   <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
   <header id="header" class="inner"><div class="alignleft">
   <h1><a href="/">雪域天堂&#39;Blog</a></h1>
-  <h2><a href="/">能学到不一定能说到，能说道不一定能做到，写作是一种思考的方式，沉淀沉淀在沉淀，思考思考在思考，重要的话说三遍。</a></h2>
+  <h2><a href="/">想得仔细, 说得清楚, 写得精确, 做得有力</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
   <ul>
@@ -64,6 +64,57 @@
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2015-08-15T01:20:30.000Z"><a href="/2015/08/15/lock/">2015-08-15</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/08/15/lock/">乐观锁与悲观锁</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="什么是锁">什么是锁</h3><p>锁在传统意义上是指期封闭作用的器具，在计算机领域通常是指单一访问的一种机制。</p>
+<h3 id="为什么需要锁">为什么需要锁</h3><p>为了解决并发控制，当多个用户同一时间对同一资源进行操作的时候，不能够允许同时操作，只能让单一用户操作。如果用户同时操作，会出现如下问题：</p>
+<ul>
+<li>更新丢失，一个事务的更新覆盖了其它事务的更新，就是典型的更新丢失。比如：A用户把数据修改为2=&gt;6，B用户把2=&gt;6，A用户就会丢失他的更新。</li>
+<li>脏读，当一个事务读取其它完成一半的事务的记录的时候，就会发生脏读。比如：用户A、B看到的记录都是6，用户B把记录修改为2，A读取的仍然是2.<br>为了解决这些问题，需要引入并发控制。
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2015/08/15/lock/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article class="post">
   
     <div class="gallery">
@@ -136,22 +187,25 @@
   <div class="post-content">
     <header>
       
-        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/sort/">2015-08-14</a></time>
+        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/git/">2015-08-14</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/08/14/sort/">常用排序算法</a></h1>
+    <h1 class="title"><a href="/2015/08/14/git/">Git常用操作</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p><strong>排序算法</strong>是程序员必须掌握的基本技能！比较常用的算法有冒泡排序、希尔排序、快速排序、堆排序等！</p>
-<h3 id="快速排序">快速排序</h3>
+        <h3 id="简介">简介</h3><p><strong>Git</strong>作为新一代的版本控制工具，给编程带来了难以想象的好处。<br>
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2015/08/14/git/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -180,25 +234,22 @@
   <div class="post-content">
     <header>
       
-        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/git/">2015-08-14</a></time>
+        <time datetime="2015-08-14T08:29:56.000Z"><a href="/2015/08/14/sort/">2015-08-14</a></time>
       
       
   
-    <h1 class="title"><a href="/2015/08/14/git/">Git常用操作</a></h1>
+    <h1 class="title"><a href="/2015/08/14/sort/">常用排序算法</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="简介">简介</h3><p><strong>Git</strong>作为新一代的版本控制工具，给编程带来了难以想象的好处。<br>
+        <p><strong>排序算法</strong>是程序员必须掌握的基本技能！比较常用的算法有冒泡排序、希尔排序、快速排序、堆排序等！</p>
+<h3 id="快速排序">快速排序</h3>
       
     </div>
     <footer>
       
-        
-          <div class="alignleft">
-            <a href="/2015/08/14/git/#more" class="more-link">Read More</a>
-          </div>
         
         
       
@@ -262,6 +313,8 @@
   <h3 class="title">分类</h3>
   <ul class="entry">
   
+    <li><a href="/categories/php/">php</a><small>1</small></li>
+  
     <li><a href="/categories/技术/">技术</a><small>3</small></li>
   
     <li><a href="/categories/杂记/">杂记</a><small>1</small></li>
@@ -274,6 +327,10 @@
 <div class="widget tag">
   <h3 class="title">最新文章</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/2015/12/04/php7/">php7</a>
+      </li>
     
       <li>
         <a href="/2015/09/28/zhongqiu/">中秋节</a>
@@ -317,10 +374,6 @@
     
       <li>
         <a href="/2015/08/15/singleten/">设计模式之单例模式</a>
-      </li>
-    
-      <li>
-        <a href="/2015/08/14/sort/">常用排序算法</a>
       </li>
     
   </ul>
