@@ -81,6 +81,125 @@
   <div class="post-content">
     <header>
       
+        <time datetime="2016-02-16T08:13:36.000Z"><a href="/2016/02/16/new-year-plan/">2016-02-16</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/02/16/new-year-plan/">2016计划</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>转眼2016年已过一个多月，农历新年刚刚结束，感觉新的一年应该有所计划，这样到年底回望的时候能够更好的总结一年的得失。</p>
+<h3 id="阅读计划">阅读计划</h3><p>将之前买的书认真读一遍</p>
+<h3 id="旅游计划">旅游计划</h3><p>这个有太多的不确定因素，不能指定具体的时间。</p>
+<ul>
+<li>骑行1000公里以上。</li>
+<li>去趟成都，九寨沟。</li>
+<li>再爬一次泰山。</li>
+</ul>
+<h3 id="写作计划">写作计划</h3><p>完成20篇博客的写作</p>
+<h3 id="摄影">摄影</h3><p>学习一些摄影的基本技巧</p>
+<h3 id="健身计划">健身计划</h3><p>每周至少去一次健身房<br>体重减10斤<br>健身记录</p>
+<h3 id="工作计划">工作计划</h3>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2016-01-13T09:33:14.000Z"><a href="/2016/01/13/pattern-strategy/">2016-01-13</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/01/13/pattern-strategy/">设计模式之策略模式</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="概述">概述</h1><p>策略模式是将特定的行为以及算法封装到一起以应对不同的状况。</p>
+<h1 id="设计模式">设计模式</h1><p>常用的设计模式有单例模式，工厂模式，等等。</p>
+<h2 id="单例模式">单例模式</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SingleTon</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="variable">$_instance</span> = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> __construct()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">self</span>::<span class="variable">$_instance</span>) &#123;</span><br><span class="line">            <span class="keyword">self</span>::<span class="variable">$_instance</span> = <span class="keyword">new</span> <span class="keyword">self</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">self</span>::<span class="variable">$_instance</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__clone</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        trigger_error(<span class="string">"Can not be cloned"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">field</th>
+<th style="text-align:left">type</th>
+<th style="text-align:left">value</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left">autoincrement</td>
+<td>自增ID</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Fenced_Code_Block"><a name="fenced-code-block">Fenced Code Block</a></h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">select * <span class="keyword">from</span> firstp2p_bonus <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">12</span> <span class="keyword">limit</span> <span class="number">1</span>;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
         <time datetime="2015-12-04T08:57:41.000Z"><a href="/2015/12/04/php7/">2015-12-04</a></time>
       
       
@@ -91,7 +210,8 @@
     </header>
     <div class="entry">
       
-        
+        <p>—php7的新特性</p>
+
       
     </div>
     <footer>
@@ -196,105 +316,13 @@
 
 
 
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-08-21T08:15:33.000Z"><a href="/2015/08/21/php-gc/">2015-08-21</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/08/21/php-gc/">php垃圾回收</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>php是一种脚本语言，一般情况下不需要进行内存回收，当进程结束后，系统将会将进程的内存回收；但是也有一些情况，比如在运行一个脚本的时候，这个脚本需要执行比较长的时间，如果代码中存在内存泄露的情况下，肯能就会出现内存不足的状况。</p>
-<p>php是由c语言实现的脚本语言，弱类型，变量的值存在zval变量容器中。其中处了保存变量的值与类型之外，还保存了两个字节的额外信息，一个是”is_ref”的布尔值，标示是否为引用类型，区分变量的类型（普通变量与引用变量 ）;另外一个是”refcount” 表示引用的个数，通常情况下这个值为1。</p>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2015/08/21/php-gc/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <time datetime="2015-08-21T03:25:26.000Z"><a href="/2015/08/21/lantern/">2015-08-21</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2015/08/21/lantern/">lantern点对点信任开放网络（翻墙必备）</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>发现一款可以用来翻墙的工具，支持各个平台，很好很强大<a href="https://www.getlantern.org/" target="_blank" rel="external">https://www.getlantern.org/</a></p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <ul class="page-direction" id="page-direction">
     <li><a class="page-prev icon-chevron-sign-left" href="javascript:;" title="上一页"></a></li>
     <li><a class="page-next icon-chevron-sign-right" href="javascript:;" title="下一页"></a></li>
 </ul>
 
-    <nav id="page-list" class="page-list"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next</a></nav>
+    <nav id="page-list" class="page-list"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next</a></nav>
 
 <nav id="pagination">
   
@@ -329,7 +357,9 @@
   
     <li><a href="/tags/架构/">架构</a><small>1</small></li>
   
-    <li><a href="/tags/设计模式/">设计模式</a><small>2</small></li>
+    <li><a href="/tags/生活/">生活</a><small>1</small></li>
+  
+    <li><a href="/tags/设计模式/">设计模式</a><small>3</small></li>
   
   </ul>
 </div>
@@ -340,11 +370,15 @@
   <h3 class="title">分类</h3>
   <ul class="entry">
   
-    <li><a href="/categories/php/">php</a><small>1</small></li>
+    <li><a href="/categories/life/">life</a><small>0</small></li>
+  
+    <li><a href="/categories/php/">php</a><small>2</small></li>
   
     <li><a href="/categories/技术/">技术</a><small>3</small></li>
   
     <li><a href="/categories/杂记/">杂记</a><small>1</small></li>
+  
+    <li><a href="/categories/计划/">计划</a><small>1</small></li>
   
   </ul>
 </div>
@@ -354,6 +388,14 @@
 <div class="widget tag">
   <h3 class="title">最新文章</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/2016/02/16/new-year-plan/">2016计划</a>
+      </li>
+    
+      <li>
+        <a href="/2016/01/13/pattern-strategy/">设计模式之策略模式</a>
+      </li>
     
       <li>
         <a href="/2015/12/04/php7/">php7</a>
@@ -395,14 +437,6 @@
         <a href="/2015/08/17/simple-factory/">设计模式之简单工厂模式</a>
       </li>
     
-      <li>
-        <a href="/2015/08/15/lock/">乐观锁与悲观锁</a>
-      </li>
-    
-      <li>
-        <a href="/2015/08/15/singleten/">设计模式之单例模式</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -412,7 +446,7 @@
   <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2015 wangshihchieh
+  &copy; 2016 wangshihchieh
   
 </div>
 <div class="clearfix"></div></footer>

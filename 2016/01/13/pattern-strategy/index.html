@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="baidu-site-verification" content="DW63u8oK8I" />
   
-  <title>php7 | 雪域天堂&#39;Blog</title>
+  <title>设计模式之策略模式 | 雪域天堂&#39;Blog</title>
   <meta name="author" content="wangshihchieh">
   
   <meta name="description" content="学而不思则罔">
@@ -12,7 +12,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="php7"/>
+  <meta property="og:title" content="设计模式之策略模式"/>
   <meta property="og:site_name" content="雪域天堂&#39;Blog"/>
 
   
@@ -80,17 +80,38 @@
   <div class="post-content">
     <header>
       
-        <time datetime="2015-12-04T08:57:41.000Z"><a href="/2015/12/04/php7/">2015-12-04</a></time>
+        <time datetime="2016-01-13T09:33:14.000Z"><a href="/2016/01/13/pattern-strategy/">2016-01-13</a></time>
       
       
   
-    <h1 class="title">php7</h1>
+    <h1 class="title">设计模式之策略模式</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>—php7的新特性</p>
+        <h1 id="概述">概述</h1><p>策略模式是将特定的行为以及算法封装到一起以应对不同的状况。</p>
+<h1 id="设计模式">设计模式</h1><p>常用的设计模式有单例模式，工厂模式，等等。</p>
+<h2 id="单例模式">单例模式</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SingleTon</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="variable">$_instance</span> = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> __construct()</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="keyword">self</span>::<span class="variable">$_instance</span>) &#123;</span><br><span class="line">            <span class="keyword">self</span>::<span class="variable">$_instance</span> = <span class="keyword">new</span> <span class="keyword">self</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">self</span>::<span class="variable">$_instance</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__clone</span><span class="params">()</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        trigger_error(<span class="string">"Can not be cloned"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">field</th>
+<th style="text-align:left">type</th>
+<th style="text-align:left">value</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left">autoincrement</td>
+<td>自增ID</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Fenced_Code_Block"><a name="fenced-code-block">Fenced Code Block</a></h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">select * <span class="keyword">from</span> firstp2p_bonus <span class="keyword">where</span> <span class="keyword">id</span> = <span class="number">12</span> <span class="keyword">limit</span> <span class="number">1</span>;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -99,12 +120,12 @@
 
         
           <div class="alignleft post-nav">
-            <em>上一篇: </em><a href="/2016/01/13/pattern-strategy/">设计模式之策略模式</a>
+            <em>上一篇: </em><a href="/2016/02/16/new-year-plan/">2016计划</a>
           </div>
         
         
           <div class="alignright post-nav">
-            <em>下一篇: </em><a href="/2015/09/28/zhongqiu/">中秋节</a>
+            <em>下一篇: </em><a href="/2015/12/04/php7/">php7</a>
           </div>
           <div class="clearfix"></div>
         
@@ -117,15 +138,15 @@
             
               <span class="from-link">
                 <em>本文链接地址:</em>
-                <a href="/2015/12/04/php7/">
-                  http://shijiewang.github.io/2015/12/04/php7/
+                <a href="/2016/01/13/pattern-strategy/">
+                  http://shijiewang.github.io/2016/01/13/pattern-strategy/
                 </a>
               </span>
             
           </div>
 
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="post-php7" data-title="php7" data-url="http://shijiewang.github.io/2015/12/04/php7/"></div>
+        <div class="ds-thread" data-thread-key="post-pattern-strategy" data-title="设计模式之策略模式" data-url="http://shijiewang.github.io/2016/01/13/pattern-strategy/"></div>
         <!-- 多说评论框 end -->
         <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
         <script type="text/javascript">
@@ -148,6 +169,11 @@
   </div>
 
         
+  
+  <div class="tags">
+    <a href="/tags/设计模式/">设计模式</a>
+  </div>
+
         
 
 <div class="bdsharebuttonbox" data-tag="share_1">
@@ -162,9 +188,9 @@
 <script>
     window._bd_share_config = {
         common : {
-            bdText : 'php7',
+            bdText : '设计模式之策略模式',
             bdDesc : 'undefined',
-            bdUrl : 'http://shijiewang.github.io/2015/12/04/php7/'
+            bdUrl : 'http://shijiewang.github.io/2016/01/13/pattern-strategy/'
         },
         share : [{
             "bdSize" : 24
